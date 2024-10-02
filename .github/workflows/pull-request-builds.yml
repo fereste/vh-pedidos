@@ -9,6 +9,7 @@ on:
 jobs:
   build_pr:
     name: Build
+    runs-on: ubuntu-latest
     steps:
       - name: Clonar repositorio
         uses: actions/checkout@v3
