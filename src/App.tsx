@@ -23,6 +23,9 @@ const App: React.FC = () => {
                         </Typography>
                         <OrderForm />
                     </Container>
+                    <Typography variant='body2' color='textSecondary'>
+                        {import.meta.env.BUILD_DATE}
+                    </Typography>
                 </Paper>
             </ThemeProvider>
         </>
