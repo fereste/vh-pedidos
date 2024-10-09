@@ -20,7 +20,7 @@ export const OrderForm = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
 
-        axios.post(`${import.meta.env.VITE_AZURE_FUNCTION_URI}/api/PlaceOrder`, {
+        axios.post(`https://vh-serverless.azurewebsites.net/api/PlaceOrder`, {
             id: product.id,
             productName: product.name,
         })
