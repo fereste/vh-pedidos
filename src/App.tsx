@@ -26,7 +26,7 @@ const App: React.FC = () => {
                             sx={{ mb: 3 }}
                         >
                             <Typography component="h1" variant="h4">
-                                Cafetería UNLaM 2025
+                                Cafetería UNLaM 2025 Junio
                             </Typography>
                         </Stack>
                         <OrderForm />
