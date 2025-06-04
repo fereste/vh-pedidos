@@ -15,7 +15,7 @@ const products: Product[] = [
 
 export const OrderForm = () => {
     const [product, setProduct] = useState<Product>(products[0]);
-    const [orderPlaced, setOrderPlaced] = useState(false);
+    const [orderPlaced, setOrderPlaced] = useState('¡Hacé tu pedido!');
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -26,7 +26,7 @@ export const OrderForm = () => {
         })
             .then(response => {
                 console.log(response);
-                setOrderPlaced(true);
+                setOrderPlaced('Se pidió un ' + product.name);
             })
             .catch(error => console.error(error));
     }
@@ -67,7 +67,7 @@ export const OrderForm = () => {
                     Hacer pedido
                 </Button>
                 <Typography variant="body1">
-                    {orderPlaced ? `Se pidió un ${product.name}` : '¡Hacé tu pedido!'}
+                    {orderPlaced}
                 </Typography>
             </Stack>
         </form>
